@@ -21,7 +21,7 @@ function compareDate($time)
     }
 
     $date = date('y-m-d', $time);
-    //同一�?
+    //同一
     if ($date == $curr_date) {
         return date('H:m:s', $time);
     } else {
@@ -34,7 +34,7 @@ function compareDate($time)
     }
 }
 
-// 兼容�? array_column
+// 兼容array_column
 if (!function_exists('array_column')) {
 
     function array_column($input, $column_key=null, $index_key=null)
