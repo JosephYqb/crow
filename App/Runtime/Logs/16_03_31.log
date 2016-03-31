@@ -1,0 +1,6 @@
+[ 2016-03-31T20:36:34+08:00 ] 127.0.0.1 /crow/crow/index.php
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001696s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001985s ]
+ERR: 模板不存在[./App/Tpl/Index/index.html]
+
