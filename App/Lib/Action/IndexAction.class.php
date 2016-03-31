@@ -38,7 +38,7 @@ class IndexAction extends BaseAction {
             $this->redirect("index");
         } else {
             echo "<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'>";
-            echo "<meta name='viewport' content='width=device-width user-scalabel=yes initial-scale=1.0 maximum-scale=3.0 minimun-scale=1.0'";
+            echo "<meta name='viewport' content='width=device-width user-scalable=yes initial-scale=1.0 maximum-scale=3.0 minimun-scale=1.0'";
             echo "用户授权失败！";
         }
     }
