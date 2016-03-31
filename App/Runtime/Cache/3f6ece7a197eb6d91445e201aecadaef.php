@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html>
 <head lang="en">
   <meta charset="UTF-8">
@@ -6,7 +6,7 @@
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title><?= $post_info['title']; ?></title>
 
-  <include file="Public/bootstrap" />
+  <link href="http://libs.baidu.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
   <style>
     img.avatar {
       width: 60px;
@@ -49,11 +49,11 @@
 </head>
 <body>
 <!--发帖者信息-->
-<a href="{:U('User/getUserInfoById?id='.$post_info['user_id'])}">
+<a href="<?php echo U('User/getUserInfoById?id='.$post_info['user_id']);?>">
 <div class="row">
   <div class="col-xs-3">
     <!--用户头像-->
-    <img class=" avatar" src=" <?= $account[$post_info['user_id']]['headimgurl'];   ?> ">
+    <img class=" avatar" src=" <?= $account[$post_info['user_id']]['headimgurl']; ?> ">
   </div>
   <div class="col-xs-7 line-height4">
     <label class="nickname"><?= $account[$post_info['user_id']]['nickname'] ?></label>
@@ -95,10 +95,10 @@
     <!--用户头像-->
     <div class="avatar">
       <img class=" avatar"
-           src=" <?= $account[$info['user_id']]['headimgurl'];   ?> ">
+           src=" <?= $account[$info['user_id']]['headimgurl']; ?> ">
     </div>
     <div class="col-xs-10">
-      <a href="{:U('User/getUserInfoById?id='.$info['user_id'])}">
+      <a href="<?php echo U('User/getUserInfoById?id='.$info['user_id']);?>">
       <label class="nickname ">
         <?= $account[$info['user_id']]['nickname'];?>
       </label>
@@ -109,7 +109,7 @@
       </label>
       <br/>
       <label>
-        <?=  compareDate($info['create_time']); ?>
+        <?= compareDate($info['create_time']); ?>
       </label>
     </div>
 
@@ -128,7 +128,8 @@
 <br/>
 <br/>
 </div>
-<include file="Public/CommonJs" />
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+<script src = "http://libs.baidu.com/bootstrap/3.0.3/js/bootstrap.min.js" ></script>
 
 </body >
 </html>
