@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -418,9 +418,9 @@
 </head>
 <body>
 <div id="write">
-    <div hidden id="open-id">{$open}</div>
-    <div hidden id="shit-list">{$shit_list}</div>
-    <div hidden id="key-word">{$key_word}</div>
+    <div hidden id="open-id"><?php echo ($open); ?></div>
+    <div hidden id="shit-list"><?php echo ($shit_list); ?></div>
+    <div hidden id="key-word"><?php echo ($key_word); ?></div>
     <a href="#">
         <i class="icon-write"></i>
     </a>
@@ -450,30 +450,27 @@
 
     <div id="content">
         <ul>
-            <volist name="post_list" id="post" key="i">
-            <li class="content-list" data-id={$post.id}>
+            <?php if(is_array($post_list)): $i = 0; $__LIST__ = $post_list;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$post): $mod = ($i % 2 );++$i;?><li class="content-list" data-id=<?php echo ($post["id"]); ?>>
                 <a href="#">
                     <div>
-                        <div><img src={$post.headimgurl}></div>
+                        <div><img src=<?php echo ($post["headimgurl"]); ?>></div>
                         <div>
                             <ul>
-                                <li><span>{$post.nickname}</span></li>
-                                <li><span>{$post.update_time}</span></li>
+                                <li><span><?php echo ($post["nickname"]); ?></span></li>
+                                <li><span><?php echo ($post["update_time"]); ?></span></li>
                             </ul>
                         </div>
                         <div class="clear"></div>
                     </div>
                     <div>
                         <ul>
-                            <li><span>{$post.title}</span></li>
-                            <li><span>{$post.content}</span></li>
+                            <li><span><?php echo ($post["title"]); ?></span></li>
+                            <li><span><?php echo ($post["content"]); ?></span></li>
                         </ul>
                     </div>
                     <div>
                         <ul class="img-list">
-                            <volist name="post.post_image" id="image" key="j">
-                            <li><img src={$image} data-preview-src="" data-preview-group={$post.id}/></li>
-                            </volist>
+                            <?php if(is_array($post["post_image"])): $j = 0; $__LIST__ = $post["post_image"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$image): $mod = ($j % 2 );++$j;?><li><img src=<?php echo ($image); ?> data-preview-src="" data-preview-group=<?php echo ($post["id"]); ?>/></li><?php endforeach; endif; else: echo "" ;endif; ?>
                             <div class="clear"></div>
                         </ul>
                     </div>
@@ -482,7 +479,7 @@
                             <li>
                                 <div>
                                     <i class="icon-see"></i>
-                                    <i>{$post.read_num}</i>
+                                    <i><?php echo ($post["read_num"]); ?></i>
                                     <div class="clear"></div>
                                 </div>
                             </li>
@@ -490,7 +487,7 @@
                             <li>
                                 <div>
                                     <i class="icon-message"></i>
-                                    <i>{$post.review_num}</i>
+                                    <i><?php echo ($post["review_num"]); ?></i>
                                     <div class="clear"></div>
                                 </div>
                             </li>
@@ -498,16 +495,15 @@
                         </ul>
                     </div>
                 </a>
-            </li>
-            </volist>
+            </li><?php endforeach; endif; else: echo "" ;endif; ?>
         </ul>
     </div>
 	
 	
 </div>
 <div id="search-page" hidden style="width: 100%;">
-    <form action="{:U('Index/home')}" method="post">
-        <input hidden value={$open} name="open" />
+    <form action="<?php echo U('Index/home');?>" method="post">
+        <input hidden value=<?php echo ($open); ?> name="open" />
         <div class="mui-input-row mui-search input-search">
             <input type="search" class="mui-input-clear" name="key_word" placeholder="请输入搜索关键字" onkeydown="searchSubmit()">
         </div>
@@ -559,7 +555,7 @@
             var key_word = $("#key-word").text();
             var node = '';
             var image_list = '';
-            $.get("{:U('Index/index')}", {open:open_id, page:count, shit_list:shit_list, key_word:key_word}, function(data){
+            $.get("<?php echo U('Index/index');?>", {open:open_id, page:count, shit_list:shit_list, key_word:key_word}, function(data){
                 var post_list = JSON.parse(data);
                 for (i in post_list) {
                     image_list = '';
@@ -569,7 +565,7 @@
                     node = '<li class="content-list" data-id="'+post_list[i].id+'"><a href="#"><div><div><img src="'+post_list[i].headimgurl+'"></div><div><ul><li><span>'+post_list[i].nickname+'</span></li><li><span>'+post_list[i].update_time+'</span></li></ul></div><div class="clear"></div></div><div><ul><li><span>'+post_list[i].title+'</span></li><li><span>'+post_list[i].content+'</span></li></ul></div><div><ul>'+image_list+'<div class="clear"></div></ul></div><div><ul><li><div><i class="icon-see"></i><i>'+post_list[i].read_num+'</i><div class="clear"></div></div></li><li><div class="divider"></div></li><li><div><i class="icon-message"></i><i>'+post_list[i].review_num+'</i><div class="clear"></div></div></li><div class="clear"></div></ul></div></a></li>';
                     $("#content>ul").append(node);
                 }
-                mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > {$page_num})); //参数为true代表没有更多数据了。
+                mui('#pullrefresh').pullRefresh().endPullupToRefresh((++count > <?php echo ($page_num); ?>)); //参数为true代表没有更多数据了。
             });
 
 		}, 500);
@@ -617,7 +613,7 @@
         });
 
         mui("body").on("tap", ".post", function(){
-            window.location.href = "{:U('Index/index', array('open' => $open))}"
+            window.location.href = "<?php echo U('Index/index', array('open' => $open));?>"
         });
 
 	});

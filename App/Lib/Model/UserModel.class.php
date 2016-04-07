@@ -37,4 +37,25 @@ class UserModel extends Model
             }
         }
     }
+
+    /**
+     * 用户登陆获取用户信息
+     * @param $username
+     * @param $password
+     * @return mixed
+     */
+    public function getUserInfo($username, $password)
+    {
+        $map = array(
+            'nickname' => $username,
+            'password' => $password
+        );
+        $user_info = $this->where($map)->find();
+        if($user_info) {
+            return $user_info;
+        } else {
+            return false;
+        }
+    }
+
 }
