@@ -1,10 +1,132 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html>
+<head lang="zh">
   <meta charset="UTF-8">
-  <title></title>
+  <title>$title</title>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
+  <style type="text/css">html {
+    font-size: 10px;
+    -webkit-text-size-adjust: 100%
+  }
+
+  html, body, header, section, footer, div, h1, h2, dl, dt, dd, ul, li, p, a, b, i {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-user-select: none
+  }
+
+  .new {
+    width: 100%;
+    background-color: #fff
+  }
+
+  html, body, .new-title {
+    width: 100%;
+    word-wrap: break-word;
+  }
+
+  body {
+    height: 100%
+  }
+
+  .new-title {
+    text-align: center;
+    margin-bottom: 1rem
+  }
+
+  body {
+    font: 1.2rem/1.4 "Microsoft YaHei", Tahoma, Arial, Roboto, "Droid Sans", "Helvetica Neue", "Droid Sans Fallback", "Heiti SC", sans-self
+  }
+
+  .new-content {
+    width: 100%;
+    background: #fff;
+    border-top: solid .05rem #d5d5d5
+  }
+
+  .footer {
+    width: 100%;
+    background: #f5f5f5
+  }
+
+  .copyright {
+    border-top: solid .05rem #d5d5d5;
+    height: 5rem;
+    color: #929292;
+    padding-top: .5rem;
+    font-size: 1rem;
+    text-align: center
+  }
+
+  .copyright p {
+    margin-top: .5rem;
+    height: 1rem;
+    line-height: 1rem
+  }
+
+  img, object {
+    max-width: 100%
+  }
+
+  @media screen and (min-width: 321px) and (max-width: 479px) {
+    html {
+      font-size: 12px
+    }
+  }
+
+  @media screen and (min-width: 480px) and (max-width: 639px) {
+    html {
+      font-size: 15px
+    }
+  }
+
+  @media screen and (min-width: 640px) and (max-width: 719px) {
+    html {
+      font-size: 20px
+    }
+  }
+
+  @media screen and (min-width: 720px) and (max-width: 749px) {
+    html {
+      font-size: 22.5px
+    }
+  }
+
+  @media screen and (min-width: 750px) and (max-width: 799px) {
+    html {
+      font-size: 23.5px
+    }
+  }
+
+  @media screen and (min-width: 800px) and (max-width: 959px) {
+    html {
+      font-size: 25px
+    }
+  }
+
+  @media screen and (min-width: 960px) and (max-width: 1079px) {
+    html {
+      font-size: 30px
+    }
+  }
+
+  @media screen and (min-width: 1080px) {
+    html {
+      font-size: 32px
+    }
+  }</style>
 </head>
 <body>
-11111111111
+<div class="new">
+  <div class="new-title"><h1>$title</h1></div>
+  <div class="new-content">$content</div>
+</div>
+<div id="news_footer" class="footer">
+  <div class="copyright"><p>Copyright &copy;2015 海豹OA 版权所有</p>
+
+    <p>厦门海豹信息技术有限公司</p></div>
+</div>
 </body>
 </html>

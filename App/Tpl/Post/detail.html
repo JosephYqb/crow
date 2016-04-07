@@ -6,8 +6,16 @@
         content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
   <title><?= $post_info['title']; ?></title>
 
-  <include file="Public/bootstrap" />
+  <include file="Public/bootstrap"/>
   <style>
+    body {
+      word-wrap: break-word;
+    }
+
+    hr {
+      margin: 0;
+    }
+
     img.avatar {
       width: 60px;
       height: 60px;
@@ -36,10 +44,15 @@
       border-color: gray;
     }
 
-    .content-image > img {
-      margin-top: 10px;
+    .post_user {
+      margin: 10px 0;
     }
-    .review_info>.avatar{
+
+    .content-image > img {
+      margin: 10px auto;
+    }
+
+    .review-info > .avatar {
       float: left;
       margin-right: 10px;
       width: 60px;
@@ -50,26 +63,27 @@
 <body>
 <!--发帖者信息-->
 <a href="{:U('User/getUserInfoById?id='.$post_info['user_id'])}">
-<div class="row">
-  <div class="col-xs-3">
-    <!--用户头像-->
-    <img class=" avatar" src=" <?= $account[$post_info['user_id']]['headimgurl'];   ?> ">
+  <div class="row post_user">
+    <div class="col-xs-3">
+      <!--用户头像-->
+      <img class=" avatar" src=" <?= $account[$post_info['user_id']]['headimgurl'];   ?> ">
+    </div>
+    <div class="col-xs-7 line-height4">
+      <label class="nickname"><?= $account[$post_info['user_id']]['nickname'] ?></label>
+    </div>
+    <div class="col-xs-2 line-height4">
+      <li class=" glyphicon glyphicon-chevron-right nickname"></li>
+    </div>
   </div>
-  <div class="col-xs-7 line-height4">
-    <label class="nickname"><?= $account[$post_info['user_id']]['nickname'] ?></label>
-  </div>
-  <div class="col-xs-2 line-height4">
-    <li class=" glyphicon glyphicon-chevron-right nickname"></li>
-  </div>
-</div>
-  </a>
+</a>
+<hr/>
 <!--帖子详情-->
 <div class="post_main">
-  <label class="control-label">
-    <h1>
+  <span>
+    <h2>
       <?= $post_info['title']; ?>
-    </h1>
-  </label>
+    </h2>
+  </span>
 
   <div>
     <p>
@@ -82,53 +96,73 @@
     <img src="<?=$image['img_path']?>"/>
     <?php } ?>
   </div>
-  <div>
-    <label class="control-label">
-      <h3> 全部评论</h3>
+  <div class="time">
+    <label>
+      <?=  compareDate($post_info['create_time']); ?>
     </label>
   </div>
-  <br/>
-  <!--评论列表-->
-
-  <?php foreach($review_info as $info){ ?>
-  <div class="col-xs-12  form-group review_info">
-    <!--用户头像-->
-    <div class="avatar">
-      <img class=" avatar"
-           src=" <?= $account[$info['user_id']]['headimgurl'];   ?> ">
-    </div>
-    <div class="col-xs-10">
-      <a href="{:U('User/getUserInfoById?id='.$info['user_id'])}">
-      <label class="nickname ">
-        <?= $account[$info['user_id']]['nickname'];?>
-      </label>
-       </a>
-      <br/>
-      <label>
-        <?= $info['content']; ?>
-      </label>
-      <br/>
-      <label>
-        <?=  compareDate($info['create_time']); ?>
-      </label>
-    </div>
-
+  <hr/>
+  <div>
+    <span class="control-label">
+      <h4> 全部评论</h4>
+    </span>
   </div>
+  <hr/>
+  <!--评论列表-->
+<div class="review-info-list">
+  <foreach name="review_info" item="info">
+    <div class="col-xs-12  form-group review-info">
 
+      <!--用户头像-->
+      <div class="avatar">
+        <img class="avatar"
+             src=" <?= $account[$info['user_id']]['headimgurl'];   ?> ">
+      </div>
+      <div class="col-xs-9 do-review" review_id="{$info.review_id}">
+        <a href="{:U('User/getUserInfoById?id='.$info['user_id'])}">
+          <label class="nickname ">
+            <?= $account[$info['user_id']]['nickname'];?>
+          </label>
+        </a>
+        <br/>
+        <label>
+          <?= $info['content']; ?>
+        </label>
+        <br/>
+        <label>
+          <?=  compareDate($info['create_time']); ?>
+        </label>
+
+        <div>
+        </div>
+
+      </div>
+
+    </div>
+    <hr/>
+  </foreach>
 </div>
-<?php } ?>
-
-<hr/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
+  <hr/>
 </div>
-<include file="Public/CommonJs" />
 
-</body >
+<!--页尾
+<footer class="row">
+  <div class="col-xs-12">
+    <div class="col-xs-4"></div>
+    <div class="col-xs-4">
+<label>评论</label>
+    </div>
+    <div class="col-xs-4"></div>
+  </div>
+</footer>-->
+<include file="Public/CommonJs"/>
+
+<script>
+
+  $(".review-info-list").on('click','.do-review', function () {
+console.log(this);
+  })
+
+</script>
+</body>
 </html>
