@@ -1,9 +1,6 @@
 <?php
 /**
- * Created by PhpStorm.
- * User: Administrator
- * Date: 2016/3/7
- * Time: 14:19
+ * 帖子详情相关
  */
 
 

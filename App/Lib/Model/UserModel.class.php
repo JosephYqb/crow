@@ -1,6 +1,7 @@
 <?php
 
 /**
+<<<<<<< HEAD
  * Created by PhpStorm.
  * User: zzw
  * Date: 16-3-31
@@ -57,5 +58,12 @@ class UserModel extends Model
             return false;
         }
     }
+=======
+ * 用户信息相关
+ */
+class UserModel extends Model
+{
+
+>>>>>>> dca6aaa60109ff7b396db1d7f4fb6568f62bcd34
 
 }
