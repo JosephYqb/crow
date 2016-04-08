@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>回复帖子</title>
+  <include file="Public/CommonCss"/>
+  <style>
+    .message{
+      text-align: center;
+      color: red;
+    }
+  </style>
+</head>
+<body>
+<form method="post">
+<div class="mui-input-row" style="margin: 10px 5px;">
+  <textarea id="textarea" name= 'content'rows="9" placeholder="输入内容"  ></textarea>
+</div>
+  <div class="mui-input-row message">{$message}</div>
+<div class="mui-button-row">
+  <button type="submit" class="mui-btn mui-btn-primary" >确认</button>&nbsp;&nbsp;
+  <button type="reset" class="mui-btn mui-btn-danger" onclick="javascript:history.back()">取消
+  </button>
+</div></form>
+
+<include file="Public/CommonJs"/>
+</body>
+</html>

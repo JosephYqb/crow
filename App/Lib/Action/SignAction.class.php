@@ -8,7 +8,7 @@
 
 define("TOKEN", "zzwzzwzzwzzw");
 
-class SignAction extends Action
+class SignAction extends BaseAction
 {
     public function valid()
     {

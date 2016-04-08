@@ -22,9 +22,6 @@
 		} else {
 			url = "<?php echo U('Index/index', array('open' => $open, 'key_word' => $key_word));?>";
 		}
-		//alert(key_word);
-		//alert(open);
-		//alert(url);
 		mui.init({
 			subpages:[{
 				url: url,

@@ -1,13 +1,12 @@
 <?php
 
 /**
-<<<<<<< HEAD
  * Created by PhpStorm.
  * User: zzw
  * Date: 16-3-31
  * Time: 下午12:33
  */
-class UserModel extends Model
+class UserModel extends BaseModel
 {
     /**
      * 获取用户信息存入数据库
@@ -58,12 +57,21 @@ class UserModel extends Model
             return false;
         }
     }
-=======
- * �û���Ϣ���
- */
-class UserModel extends Model
-{
-
->>>>>>> dca6aaa60109ff7b396db1d7f4fb6568f62bcd34
+    /**
+     * @param  array $user_list 用户列表
+     *
+     * @return array mixed
+     */
+    public function getUseInfoByUserList($user_list)
+    {
+        $user_list = array_unique($user_list);
+        $where     = array(
+            'id' => array(
+                'in',
+                implode(',', $user_list)
+            )
+        );
+        return $this->where($where)->field('id , nickname, headimgurl')->select();
+    }
 
 }

@@ -2,12 +2,11 @@
 
 /**
  * Created by PhpStorm.
-<<<<<<< HEAD
  * User: zzwoctavianus
  * Date: 16/4/5
  * Time: 下午4:36
  */
-class PostModel extends Model
+class PostModel extends BaseModel
 {
     /**
      * 获取前三项置顶
@@ -84,13 +83,21 @@ class PostModel extends Model
         }
         return $this->where($map)->count();
     }
-=======
- * User: Administrator
- * Date: 16/04/05
- * Time: 10:23
- */
-class PostModel
-{
 
->>>>>>> dca6aaa60109ff7b396db1d7f4fb6568f62bcd34
+    /**
+     * 获取帖子详情
+     * @param $post_id
+     *
+     * @return mixed
+     */
+    public function getPostInfo($post_id)
+    {
+        $where = array(
+            'id'     => $post_id,
+            'status' => 1
+        );
+        $field = 'id , title , content, user_id, create_time';
+
+        return $this->where($where)->field($field)->find();
+    }
 }

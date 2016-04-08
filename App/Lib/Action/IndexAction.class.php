@@ -1,16 +1,17 @@
 <?php
 require_once("BaseAction.class.php");
 
-class IndexAction extends BaseAction {
+class IndexAction extends BaseAction
+{
     /**
      * 首页
      */
     public function index()
     {
-        $open_id = trim(I("get.open"));
-        $page = empty(I("get.page")) ? 1 : intval(I("get.page"));
+        $open_id   = trim(I("get.open"));
+        $page      = I('get.page', 1, 'intval');
         $shit_list = I("get.shit_list") ? trim(I("get.shit_list")) : '';
-        $key_word = I("get.key_word") ? trim(I("get.key_word")) : '';
+        $key_word  = I("get.key_word") ? trim(I("get.key_word")) : '';
         //var_dump($open_id);
         //exit;
         if (empty($open_id)) {
@@ -19,12 +20,12 @@ class IndexAction extends BaseAction {
             $post_mod = D('Post');
             if ($page == 1) {
                 //初始列表
-                $count = $post_mod->getPostNum($key_word);
-                $page_num = (Int)ceil($count / C("PAGE_NUM"));
+                $count     = $post_mod->getPostNum($key_word);
+                $page_num  = (Int) ceil($count / C("PAGE_NUM"));
                 $shit_info = $post_mod->getShit();
                 //var_dump($shit_info['shit_post']);
                 $post_list = $post_mod->homeGetPost($shit_info['shit_list'], $key_word, $page, 7);
-                if (empty($post_list)){
+                if (empty($post_list)) {
                     $post_list = $shit_info['shit_post'];
                 } else {
                     $post_list = array_merge($shit_info['shit_post'], $post_list);
@@ -41,7 +42,7 @@ class IndexAction extends BaseAction {
                 //上拉加载
                 $post_list = $post_mod->homeGetPost($shit_list, $key_word, $page);
                 $post_list = D('Image')->getImageDateReview($post_list);
-                echo json_encode((Object)$post_list);
+                echo json_encode((Object) $post_list);
             }
         }
     }
@@ -49,10 +50,10 @@ class IndexAction extends BaseAction {
     /**
      * 首页外框
      */
-	public function home()
+    public function home()
     {
-        $user = unserialize(session("user_info"));
-        $open_id = $user['open_id'];
+        $user     = unserialize(session("user_info"));
+        $open_id  = $user['open_id'];
         $key_word = trim(I("post.key_word"));
         //var_dump($key_word);
         if (empty($open_id)) {
@@ -62,7 +63,7 @@ class IndexAction extends BaseAction {
             $this->assign("key_word", $key_word);
             $this->display();
         }
-	}
+    }
 
 
     /**
@@ -77,17 +78,20 @@ class IndexAction extends BaseAction {
         }
 
         $get_access_token_url = "https://api.weixin.qq.com/sns/oauth2/access_token?appid=wx2cdc84d09235b490&secret=118d1cd3445c2ac6e5bbfa7aa1f3f9f2&code=$code&grant_type=authorization_code";
-        $res = file_get_contents($get_access_token_url);
-        $res = json_decode($res, true);
+        $res                  = file_get_contents($get_access_token_url);
+        $res                  = json_decode($res, true);
 
-        $url_userinfo = "https://api.weixin.qq.com/sns/userinfo?access_token=".$res['access_token']."&openid=".$res['openid'];
-        $res_info = file_get_contents($url_userinfo);
-        $res_info = json_decode($res_info, true);
-        $flag = D("User")->getUser($res_info);
+        $url_userinfo = "https://api.weixin.qq.com/sns/userinfo?access_token=" . $res['access_token'] . "&openid=" . $res['openid'];
+        $res_info     = file_get_contents($url_userinfo);
+        $res_info     = json_decode($res_info, true);
+        $flag         = D("User")->getUser($res_info);
         if ($flag) {
             $res_info['id'] = $flag;
             session('user_info', $res_info);
-            $this->redirect("home", array('open' => $res_info['openid'], 'page' => 0));
+            $this->redirect("home", array(
+                'open' => $res_info['openid'],
+                'page' => 0
+            ));
         } else {
             echo "<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'>";
             echo "<meta name='viewport' content='width=device-width user-scalable=yes initial-scale=1.0 maximum-scale=3.0 minimum-scale=1.0'";
@@ -97,7 +101,9 @@ class IndexAction extends BaseAction {
 
     /**
      * get请求微信接口(暂时不用)
+     *
      * @param $url
+     *
      * @return mixed
      */
     private function getUrl($url)
@@ -107,6 +113,7 @@ class IndexAction extends BaseAction {
         CURL_SETOPT($curl, CURLOPT_RETURNTRANSFER, 1);
         $res = curl_exec($curl);
         curl_close($curl);
+
         return $res;
     }
 }

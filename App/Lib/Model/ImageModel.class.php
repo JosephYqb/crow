@@ -6,7 +6,7 @@
  * Date: 16/4/5
  * Time: 下午6:28
  */
-class ImageModel extends Model
+class ImageModel extends BaseModel
 {
     /**
      * 获取帖子图片和时间戳转化还有统计回复数

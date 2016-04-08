@@ -583,8 +583,8 @@
 
 
 	    mui("body").on("tap", ".content-list", function(){
-		    var id = $(this).attr("data-id");
-			alert(id);
+		    var pid = $(this).attr("data-id");
+			window.parent.location.href="__ROOT__/index.php/Post/detail/pid/"+pid;
 		});
 
 		
@@ -597,7 +597,7 @@
 		});
 
         mui("body").on("tap", "#write", function(){
-            alert("write");
+            window.parent.location.href="<?php echo U('PostMes/postMes');?>";
         });
 
         mui("body").on("tap", ".search", function(){
@@ -613,7 +613,7 @@
         });
 
         mui("body").on("tap", ".post", function(){
-            window.location.href = "<?php echo U('Index/index', array('open' => $open));?>"
+            window.parent.location.href = "<?php echo U('Index/home', array('open' => $open));?>"
         });
 
 	});
