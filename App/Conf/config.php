@@ -14,16 +14,15 @@ return array(
 
 
     //主机屋环境
-    /*
-    'DB_TYPE' => 'mysql',
+    /*'DB_TYPE' => 'mysql',
     'DB_HOST' => '127.0.0.1',
     'DB_NAME' => 'zjwdb_499083',
     'DB_USER' => 'zjwdb_499083',
     'DB_PWD' => 'Zjwdb_499083',
     'DB_PORT' => '3306',
     'DB_PREFIX' => 'tb_',
-    'DB_DEBUG' => false,
-    */
+    'DB_DEBUG' => false,*/
+
 
 
     'SESSION_OPTIONS' => array(

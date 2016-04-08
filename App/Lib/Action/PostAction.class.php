@@ -18,7 +18,7 @@ class PostAction extends BaseAction
             if (!empty($post_info)) {
 
                 $post_image_info = M('image')->where('post_id = ' . $post_id)->field('img_path')->select();
-                $this->assign('post_image_info', $post_image_info ?: array());
+                $this->assign('post_image_info', $post_image_info ? $post_image_info : array());
                 // 获取改帖子评论列表
                 $review_info = D('Review')->getPostReviewByPostId($post_id);
                 $this->assign('review_info', $review_info);
