@@ -1,2 +1,5 @@
-/App/Runtime/
-/.idea/
+App/Runtime/*
+/.idea/*
+.idea/*
+
+
