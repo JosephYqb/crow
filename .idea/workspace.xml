@@ -11,13 +11,10 @@
       <change type="DELETED" beforePath="$PROJECT_DIR$/App/Runtime/Cache/1ff68a1c4a1b27b9c516af3d88844540.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/App/Runtime/Cache/248f9b1a7f7acfcef7d31542967f72dd.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/App/Runtime/Cache/3f6ece7a197eb6d91445e201aecadaef.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/App/Runtime/Cache/62e2a2fe6728c841d82ff4bbd03e2ae6.php" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/App/Runtime/Cache/4d3216cae53cc65e0e5f08f9fc61d4ea.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/App/Runtime/Cache/7129252c902754c5a098dffd5889962b.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/App/Runtime/Cache/dadb96b98cfd7699f99658d22b385f5d.php" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/App/Runtime/Cache/f331a3f0d874c4248458495ef2c2c2d1.php" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/App/Runtime/Logs/1460130257-16_04_08.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/App/Runtime/Logs/16_04_07.log" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/App/Runtime/Logs/16_04_08.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/App/Runtime/Logs/16_04_09.log" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/App/Tpl/Public/bootstrap.html" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitconfig" afterPath="$PROJECT_DIR$/.gitconfig" />
@@ -67,21 +64,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PostModel.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Lib/Model/PostModel.class.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-39.375">
-              <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="config.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="config.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/App/Conf/config.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.0833335">
-              <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
+            <state vertical-scroll-proportion="0.48644793">
+              <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -97,11 +84,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="IndexAction.class.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/App/Lib/Action/IndexAction.class.php">
+      <file leaf-file-name="BaseAction.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Lib/Action/BaseAction.class.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="7.5">
-              <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+            <state vertical-scroll-proportion="-11.25">
+              <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
               <folding />
             </state>
           </provider>
@@ -127,10 +114,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="postMes.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="postMes.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Tpl/PostMes/postMes.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.08559201">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="4" column="126" selection-start-line="4" selection-start-column="126" selection-end-line="4" selection-end-column="126" />
               <folding />
             </state>
@@ -150,8 +137,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Tpl/Index/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-368.75">
-              <caret line="590" column="59" selection-start-line="590" selection-start-column="59" selection-end-line="590" selection-end-column="59" />
+            <state vertical-scroll-proportion="-15.458333">
+              <caret line="623" column="94" selection-start-line="623" selection-start-column="94" selection-end-line="623" selection-end-column="94" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
@@ -159,10 +146,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="UserAction.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/App/Lib/Action/UserAction.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/App/Tpl/Post/detail.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
+            <state vertical-scroll-proportion="60.166668">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
@@ -194,7 +191,6 @@
         <option value="$PROJECT_DIR$/App/Lib/Action/LoginAction.php" />
         <option value="$PROJECT_DIR$/App/Lib/Action/Signup.class.php" />
         <option value="$PROJECT_DIR$/App/Lib/Action/IndexAction.class.php" />
-        <option value="$PROJECT_DIR$/App/Lib/Action/BaseAction.class.php" />
         <option value="$PROJECT_DIR$/App/Tpl/Signup/sign_up.html" />
         <option value="$PROJECT_DIR$/App/Tpl/Login/login.html" />
         <option value="$PROJECT_DIR$/App/Lib/Action/LoginAction.class.php" />
@@ -204,11 +200,12 @@
         <option value="$PROJECT_DIR$/App/Lib/Action/SignupAction.class.php" />
         <option value="$PROJECT_DIR$/App/Tpl/Signup/signUp.html" />
         <option value="$PROJECT_DIR$/App/Tpl/Index/home.html" />
-        <option value="$PROJECT_DIR$/App/Tpl/Index/index.html" />
-        <option value="$PROJECT_DIR$/App/Conf/config.php" />
         <option value="$PROJECT_DIR$/App/Lib/Action/PostAction.class.php" />
         <option value="$PROJECT_DIR$/App/Tpl/Review/reviewPost.html" />
         <option value="$PROJECT_DIR$/App/Tpl/PostMes/postMes.html" />
+        <option value="$PROJECT_DIR$/App/Lib/Action/BaseAction.class.php" />
+        <option value="$PROJECT_DIR$/App/Tpl/Index/index.html" />
+        <option value="$PROJECT_DIR$/App/Conf/config.php" />
       </list>
     </option>
   </component>
@@ -662,14 +659,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/App/Lib/Action/IndexAction.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="33" column="59" selection-start-line="33" selection-start-column="59" selection-end-line="33" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Lib/Action/BaseAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -905,14 +894,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Lib/Action/BaseAction.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625">
-          <caret line="9" column="43" selection-start-line="9" selection-start-column="43" selection-end-line="9" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ThinkPHP/Extend/Vendor/qiniu/http.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.29411766">
@@ -956,42 +937,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Lib/Model/UserModel.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-24.833334">
-          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Lib/Model/PostModel.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-39.375">
           <caret line="63" column="12" selection-start-line="63" selection-start-column="12" selection-end-line="63" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Lib/Action/IndexAction.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.5">
-          <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Lib/Action/PostMesAction.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/Tpl/Post/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1004,14 +953,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Conf/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.0833335">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/Lib/Action/PostAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-6.875">
@@ -1020,13 +961,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Tpl/Index/index.html">
+    <entry file="file://$PROJECT_DIR$/App/Lib/Action/IndexAction.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-368.75">
-          <caret line="590" column="59" selection-start-line="590" selection-start-column="59" selection-end-line="590" selection-end-column="59" />
-          <folding>
-            <element signature="n#style#0;n#div#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="1.0">
+          <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Lib/Model/UserModel.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-24.833334">
+          <caret line="75" column="0" selection-start-line="75" selection-start-column="0" selection-end-line="75" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Tpl/PostMes/postMes.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0">
+          <caret line="4" column="126" selection-start-line="4" selection-start-column="126" selection-end-line="4" selection-end-column="126" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1038,10 +993,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/Tpl/PostMes/postMes.html">
+    <entry file="file://$PROJECT_DIR$/App/Tpl/Post/detail.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08559201">
-          <caret line="4" column="126" selection-start-line="4" selection-start-column="126" selection-end-line="4" selection-end-column="126" />
+        <state vertical-scroll-proportion="60.166668">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Lib/Action/UserAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Lib/Action/BaseAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.25">
+          <caret line="18" column="41" selection-start-line="18" selection-start-column="41" selection-end-line="18" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Tpl/Index/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.458333">
+          <caret line="623" column="94" selection-start-line="623" selection-start-column="94" selection-end-line="623" selection-end-column="94" />
+          <folding>
+            <element signature="n#style#0;n#div#1;n#ul#0;n#div#0;n#div#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Lib/Action/PostMesAction.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/Conf/config.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48644793">
+          <caret line="23" column="24" selection-start-line="23" selection-start-column="24" selection-end-line="23" selection-end-column="24" />
           <folding />
         </state>
       </provider>

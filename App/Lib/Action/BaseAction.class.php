@@ -14,6 +14,9 @@ class BaseAction extends Action
         $this->user_info = unserialize(session('user_info'));
         if (!$this->user_info) {
             $this->redirect("Login/login");
+        } else {
+            $user = unserialize(session("user_info"));
+            $this->assign("user", $user);
         }
     }
 

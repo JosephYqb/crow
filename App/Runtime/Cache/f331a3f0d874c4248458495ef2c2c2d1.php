@@ -616,6 +616,10 @@
             window.parent.location.href = "<?php echo U('Index/home', array('open' => $open));?>"
         });
 
+        mui("body").on("tap", ".home", function(){
+            window.parent.location.href = "<?php echo U('User/getUserInfoById', array('id' => $user['id']));?>";
+        });
+
 	});
 
     function searchSubmit(){
