@@ -1,12 +1,18 @@
 <?php
 
-class BaseAction extends Action {
+/**
+ * Class BaseAction
+ */
+class BaseAction extends Action
+{
+    //存储用户信息系
+    public $user_info;
 
     public function __construct()
     {
         parent::__construct();
-        $user = unserialize(session('user_info'));
-        if (!$user) {
+        $this->user_info = unserialize(session('user_info'));
+        if (!$this->user_info) {
             $this->redirect("Login/login");
         }
     }
@@ -21,4 +27,5 @@ class BaseAction extends Action {
         echo "系统出错!";
         exit;
     }
+
 }

@@ -6,7 +6,7 @@
  * Date: 16-3-31
  * Time: 下午12:33
  */
-class UserModel extends Model
+class UserModel extends BaseModel
 {
     /**
      * 获取用户信息存入数据库

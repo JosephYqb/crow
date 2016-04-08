@@ -3,7 +3,7 @@
 /**
  * 帖子详情相关
  */
-class PostAction extends Action
+class PostAction extends BaseAction
 {
 
     /**
@@ -12,7 +12,7 @@ class PostAction extends Action
     public function detail()
     {
 
-        $post_id = (int) $_REQUEST['pid'];
+        $post_id = I('get.pid',0,'intval');
         if ($post_id != 0) {
             $post_info = D('Post')->getPostInfo($post_id);
             if (!empty($post_info)) {

@@ -6,7 +6,7 @@
  * Date: 2016/4/8
  * Time: 9:44
  */
-class PostMesAction extends Action
+class PostMesAction extends BaseAction
 {
     public function postMes()
     {

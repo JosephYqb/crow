@@ -6,7 +6,7 @@
  * Date: 16/4/5
  * Time: 下午4:36
  */
-class PostModel extends Model
+class PostModel extends BaseModel
 {
     /**
      * 获取前三项置顶
