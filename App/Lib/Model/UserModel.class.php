@@ -1,7 +1,6 @@
 <?php
 
 /**
-<<<<<<< HEAD
  * Created by PhpStorm.
  * User: zzw
  * Date: 16-3-31
@@ -58,15 +57,10 @@ class UserModel extends Model
             return false;
         }
     }
-=======
- * 用户信息相关
- */
-class UserModel extends Model
-{
     /**
-     * @param  array $user_list 用户数组
+     * @param  array $user_list 鐢ㄦ埛鍒楄〃
      *
-     * @return array mixed         用户信息
+     * @return array mixed
      */
     public function getUseInfoByUserList($user_list)
     {
@@ -77,13 +71,7 @@ class UserModel extends Model
                 implode(',', $user_list)
             )
         );
-
-<<<<<<< HEAD
-        //获取用户信息
         return $this->where($where)->field('id , nickname, headimgurl')->select();
     }
-=======
->>>>>>> dca6aaa60109ff7b396db1d7f4fb6568f62bcd34
->>>>>>> 0b89b50c31f250206a86ae9889beee9fd2177e11
 
 }

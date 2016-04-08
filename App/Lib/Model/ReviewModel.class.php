@@ -1,12 +1,12 @@
 <?php
 
 /**
- * 帖子回复相关
+ * 甯栧瓙鍥炲鐩稿叧
  */
 class ReviewModel extends Model
 {
     /**
-     * 获取帖子回复
+     * 鑾峰彇甯栧瓙鍥炲
      * @param $post_id
      *
      * @return mixed

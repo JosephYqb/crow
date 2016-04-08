@@ -2,7 +2,6 @@
 
 /**
  * Created by PhpStorm.
-<<<<<<< HEAD
  * User: zzwoctavianus
  * Date: 16/4/5
  * Time: 涓嬪崍4:36
@@ -84,17 +83,9 @@ class PostModel extends Model
         }
         return $this->where($map)->count();
     }
-=======
- * User: Administrator
- * Date: 16/04/05
- * Time: 10:23
- */
-class PostModel extends Model
-{
 
-<<<<<<< HEAD
     /**
-     * 获取帖子详情
+     * 鑾峰彇甯栧瓙璇︽儏
      * @param $post_id
      *
      * @return mixed
@@ -109,8 +100,4 @@ class PostModel extends Model
 
         return $this->where($where)->field($field)->find();
     }
-
-=======
->>>>>>> dca6aaa60109ff7b396db1d7f4fb6568f62bcd34
->>>>>>> 0b89b50c31f250206a86ae9889beee9fd2177e11
 }

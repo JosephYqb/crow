@@ -3,16 +3,17 @@ return array(
 	//'配置项'=>'配置值'
 
     //本地测试环境
-    /*'DB_TYPE' => 'mysql',
+    'DB_TYPE' => 'mysql',
     'DB_HOST' => '127.0.0.1',
     'DB_NAME' => 'zjwdb_499083',
     'DB_USER' => 'root',
     'DB_PWD' => '',
     'DB_PORT' => '3306',
     'DB_PREFIX' => 'tb_',
-    'DB_DEBUG' => true,*/
+    'DB_DEBUG' => true,
 
     //主机屋环境
+    /*
     'DB_TYPE' => 'mysql',
     'DB_HOST' => '127.0.0.1',
     'DB_NAME' => 'zjwdb_499083',
@@ -21,8 +22,8 @@ return array(
     'DB_PORT' => '3306',
     'DB_PREFIX' => 'tb_',
     'DB_DEBUG' => false,
-
-    'SESSION_OPTIONS' => array(
+ */
+   'SESSION_OPTIONS' => array(
         'expire' => 86400
     ),
 

@@ -1,17 +1,17 @@
 <?php
 
 /**
- * 帖子回复相关
+ * 鍥炲鐩稿叧
  */
 class ReviewAction extends Action
 {
     public function reviewPost(){
 
         $post_id = I('.post_id',0,'intval');
-        //是否回复某人
+        //鍥炲璋佺殑鍥炲
         $review_id = I('.review_id',0,'intval');
 
-        //user_id  todo  从session 中读取
+        //user_id  todo  锟斤拷session 锟叫讹拷取
         $user_id = 1;
 
     }
